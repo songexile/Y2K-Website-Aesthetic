@@ -31,8 +31,8 @@ function App() {
           <div className="h-2/6 bg-gradient-to-t from-[#cee3e5] to-[#b4cdcf] mx-2 mt-2 rounded-md y2k-shadow4 inner-stroke"></div>
           <div className="h-3/6 flex mx-2 mt-2 ">
             <div className="h-full w-full flex flex-col">
-              <div className="h-full bg-gradient-to-t from-[#cee3e5] to-[#b4cdcf] mb-2 rounded-md y2k-shadow4 inner-stroke"></div>
-              <div className="h-4/6 bg-gradient-to-t from-[#8ea7aa] to-[#53686b] y2k-shadow3 rounded-md mt-2 mb-2 inner-stroke"></div>
+              <div className="h-full bg-gradient-to-t from-[#cee3e5] to-[#b4cdcf] mb- rounded-md y2k-shadow4 inner-stroke"></div>
+              <div className="h-4/6 bg-gradient-to-t from-[#8ea7aa] to-[#53686b] y2k-shadow3 rounded-md mt-2 mb-1 inner-stroke"></div>
             </div>
             <div className="w-1/2 h-full bg-gradient-to-t from-[#4e6365] to-[#b5d0d2] ml-2 rounded-md flex flex-col items-center inner-stroke">
               <div className="h-6 mt-2 w-5/6 bg-[#8ba9b0] rounded-md y2k-shadow4 border-y2k"></div>
