@@ -44,7 +44,51 @@
   .border-y2k {
     border: 2px groove #cee3e5;
   }
+
+  .arrow-left:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 12px;
+    height: 12px;
+    border-width: 2px;
+    border-color: inherit;
+    border-top: none;
+    border-right: none;
+  }
   
+  .arrow-right:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(-135deg);
+    width: 12px;
+    height: 12px;
+    border-width: 2px;
+    border-color: inherit;
+    border-top: none;
+    border-right: none;
+  }
+  
+  .reset-styles {
+    all: initial;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: inherit;
+  }
+  
+  .xp-button-container {
+    background: linear-gradient(180deg,#fff,#ecebe5 86%,#d8d0c4);
+   
+  }
   
 
   
