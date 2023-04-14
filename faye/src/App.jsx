@@ -5,19 +5,49 @@ import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [currentDate, setCurrentDate] = useState(new Date());
+
+const options = { weekday: 'short', year: 'numeric', month: '2-digit', day: '2-digit' };
+const formattedDate = currentDate
+  .toLocaleDateString(undefined, options)
+  .replace(/\s/g, '')
+  .replace(/-/g, '/')
+  .replace(/,/g, '/');
+
+const weekdayIndex = formattedDate.indexOf('/');
+const formattedDateUpperCase = formattedDate.slice(0, weekdayIndex).toUpperCase() + formattedDate.slice(weekdayIndex);
+
+
+
+
 
   return (
+    <div className="window" style={{ width: "66%" }}>
+    <div className="title-bar">
+      <div className="title-bar-text">세계 액세스</div>
+      <div className="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    <div className="window-body">
 <div className="App">
-  <div className="mx-auto w-2/3 h-screen flex items-center justify-center y2k-shadow3 relative border-y2k">
+  <div className="mx-auto flex items-center justify-center  relative ">
     {/* Pseudo-element for background image */}
     <div className="absolute inset-0  bg-opacity-20 z-0 shadow-xl "></div>
     {/* Pseudo-element for background color */}
-    <div className="absolute inset-0 bg-slate-900 bg-opacity-50 z-0"></div>
+    <div className="absolute inset-0 bg-[url('./assets/denim.webp')]   z-0"></div>
     {/* Main Div/Container */}
     <div className="mx-4 w-full    relative z-10 rounded-lg">
       {/* Header/Nav */}
-      <div className="h-16 w-full flex justify-center items-center y2k-shadow4 bg-gradient-to-r from-[#cee3e5] to-[#b4cdcf] rounded-lg inner-stroke2 opacity-90 "></div>
-      <div className="flex h-[52rem] ">
+      <div className="h-8 mt-4 w-full flex justify-center items-center y2k-shadow4 bg-gradient-to-r from-[#cee3e5] to-[#b4cdcf] rounded-lg inner-stroke2 opacity-90 ">
+        <div className="flex justify-end  w-full">
+        <h1 className="rounded-2xl bg-gradient-to-r w-32 inner-stroke2 grow-1 y2k-shadow2  ">{formattedDateUpperCase}</h1>
+
+        </div>
+      </div>
+      <div className="flex h-[48rem] p-4 ">
         {/* Left Side */}
         <div className="w-2/3 flex flex-col">
           <div className="h-5/6 bg-blue-300 mx-1 mt-2 rounded-xl y2k-shadow2 flex justify-center items-center ">
@@ -96,7 +126,9 @@ function App() {
 </div>
 
   </div>
-</div>
+  </div>
+      </div>
+    </div>
 
   );
 }
