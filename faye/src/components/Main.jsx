@@ -9,7 +9,7 @@ function Main() {
   return (
     <div>
       {" "}
-      <div className="flex justify-center items-center min-h-screen bg-black">
+      <div className="flex justify-center items-center min-h-screen bg-slate-900">
         <div className="window md:w-2/3">
           <div className="title-bar">
             <div className="title-bar-text">세계 액세스</div>
