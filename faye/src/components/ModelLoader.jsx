@@ -5,11 +5,8 @@ import { OrbitControls, Html, Plane } from "@react-three/drei";
 import { TextureLoader, CubeTextureLoader, RepeatWrapping } from "three";
 import * as THREE from "three";
 
-function Model() {
-  const gltf = useLoader(
-    GLTFLoader,
-    "src/assets/models/mercedes-benz_s_500_-_ps1_low_poly/scene.gltf"
-  );
+function Model(props) {
+  const gltf = useLoader(GLTFLoader, props.modelPath);
 
   // Access the object's transform
   const meshRef = useRef();
@@ -31,14 +28,14 @@ function Skybox() {
       side: THREE.BackSide,
     }),
     new THREE.MeshBasicMaterial({
-      map: new THREE.TextureLoader().load("src/assets/skybox/ffx.jpg"),
+      map: new THREE.TextureLoader().load("src/assets/skybox/aura.jpg"),
       side: THREE.BackSide,
     }),
   ];
 
   return (
     <mesh ref={meshRef}>
-      <boxBufferGeometry args={[1000, 1000, 1000]} />
+      <boxBufferGeometry args={[150, 150, 150]} />
       {materials.map((material, index) => (
         <primitive key={index} object={material} attachArray="material" />
       ))}
@@ -46,11 +43,11 @@ function Skybox() {
   );
 }
 
-function ModelLoader() {
-  const texture = useLoader(TextureLoader, "src/assets/faey2.PNG");
+function ModelLoader(props) {
+  const texture = useLoader(TextureLoader, "src/assets/aura3.PNG");
   texture.wrapS = RepeatWrapping;
   texture.wrapT = RepeatWrapping;
-  texture.repeat.set(10000, 10000);
+  texture.repeat.set(5, 5);
 
   return (
     <Canvas camera={{ position: [-10, 3, 5], fov: 80 }}>
@@ -64,15 +61,13 @@ function ModelLoader() {
         }
       >
         <Skybox />
-        <Model />
+        <Model modelPath={props.modelPath} />
       </Suspense>
-      {/* <mesh position={[0, 0.1, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+      <mesh position={[0, 0.1, 0]} rotation={[-Math.PI / 2, 0, 0]}>
         <planeBufferGeometry args={[1000, 1000, 100, 100]} />
         <meshBasicMaterial map={texture} />
-      </mesh> */}
-      {/* <mesh>
-        <boxBufferGeometry args={[1000, 1000, 1000]} />
-      </mesh> */}
+      </mesh>
+
       <OrbitControls enablePan={true} enableRotate={true} enableZoom={true} />
     </Canvas>
   );
