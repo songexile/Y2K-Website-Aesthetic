@@ -1,9 +1,9 @@
 import React, { Suspense, useRef } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useLoader, useFrame } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { useLoader, useFrame } from "@react-three/fiber";
 import { OrbitControls, Html, Plane } from "@react-three/drei";
-import { TextureLoader, RepeatWrapping } from "three";
+import { TextureLoader, CubeTextureLoader, RepeatWrapping } from "three";
+import * as THREE from "three";
 
 function Model() {
   const gltf = useLoader(
@@ -20,14 +20,40 @@ function Model() {
   return <primitive object={gltf.scene} ref={meshRef} />;
 }
 
-function ModelLoader() {
-  const texture = useLoader(TextureLoader, "src/assets/aura2.PNG");
-  texture.wrapS = RepeatWrapping;
-  texture.wrapT = RepeatWrapping;
-  texture.repeat.set(800, 1000);
+function Skybox() {
+  const meshRef = React.useRef();
+
+  const materials = [
+    new THREE.MeshBasicMaterial({
+      map: new THREE.TextureLoader().load(
+        "src/assets/skybox/vz_classic_right.PNG"
+      ),
+      side: THREE.BackSide,
+    }),
+    new THREE.MeshBasicMaterial({
+      map: new THREE.TextureLoader().load("src/assets/skybox/ffx.jpg"),
+      side: THREE.BackSide,
+    }),
+  ];
 
   return (
-    <Canvas camera={{ position: [-20, 3, 5], fov: 50 }}>
+    <mesh ref={meshRef}>
+      <boxBufferGeometry args={[1000, 1000, 1000]} />
+      {materials.map((material, index) => (
+        <primitive key={index} object={material} attachArray="material" />
+      ))}
+    </mesh>
+  );
+}
+
+function ModelLoader() {
+  const texture = useLoader(TextureLoader, "src/assets/faey2.PNG");
+  texture.wrapS = RepeatWrapping;
+  texture.wrapT = RepeatWrapping;
+  texture.repeat.set(10000, 10000);
+
+  return (
+    <Canvas camera={{ position: [-10, 3, 5], fov: 80 }}>
       <ambientLight intensity={0.5} />
       <directionalLight color="white" intensity={1} position={[0, 10, 5]} />
       <Suspense
@@ -37,17 +63,17 @@ function ModelLoader() {
           </Html>
         }
       >
+        <Skybox />
         <Model />
       </Suspense>
-      <mesh position={[0, -0.5, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+      {/* <mesh position={[0, 0.1, 0]} rotation={[-Math.PI / 2, 0, 0]}>
         <planeBufferGeometry args={[1000, 1000, 100, 100]} />
         <meshBasicMaterial map={texture} />
-      </mesh>
-      <OrbitControls
-        enablePan={false}
-        enableRotate={false}
-        enableZoom={false}
-      />
+      </mesh> */}
+      {/* <mesh>
+        <boxBufferGeometry args={[1000, 1000, 1000]} />
+      </mesh> */}
+      <OrbitControls enablePan={true} enableRotate={true} enableZoom={true} />
     </Canvas>
   );
 }
