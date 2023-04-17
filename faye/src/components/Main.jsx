@@ -4,22 +4,21 @@ import { useState } from "react";
 import Header from "./Header";
 import LeftPage from "./LeftPage";
 import RightPage from "./RightPage";
+import carModelsData from "../data/cars.json";
 
 function Main() {
-  const carModels = [
-    "src/assets/models/mercedes-benz_s_500_-_ps1_low_poly/scene.gltf",
-    "src/assets/models/toyota_corolla_-_ps1_low_poly/scene.gltf",
-    "src/assets/models/honda_accord_-_ps1_low_poly/scene.gltf",
-    // "src/assets/models/kawasaki_spectre_-_ps1_low_poly/scene.gltf",
-    // "src/assets/models/suzuki_grand_vitara_-_ps1_low_poly/scene.gltf",
-    // "src/assets/models/volkswagen_golf_v_-_ps1_low_poly/scene.gltf",
-    "src/assets/models/volvo_v70_-_ps1_low_poly/scene.gltf",
-  ];
+  const carModels = carModelsData.map((carModel) => {
+    return {
+      name: carModel.name,
+      description: carModel.description,
+      modelUrl: carModel.modelUrl,
+    };
+  });
 
   const [currentModelIndex, setCurrentModelIndex] = useState(0);
+
   return (
     <div>
-      {" "}
       <div className="flex justify-center items-center min-h-screen bg-black">
         <div className="window md:w-2/3">
           <div className="title-bar">
@@ -32,23 +31,26 @@ function Main() {
           </div>
           <div className="window-body">
             <div className="App font-pixelated-sans flex items-center">
-              <div className="mx-auto flex   relative ">
+              <div className="mx-auto flex relative">
                 {/* Pseudo-element for background image */}
-                <div className="absolute inset-0  bg-opacity-20 z-0 shadow-xl "></div>
+                <div className="absolute inset-0 bg-opacity-20 z-0 shadow-xl"></div>
                 {/* Pseudo-element for background color */}
-                <div className="absolute inset-0 bg-[url('./assets/aura3.png')]   z-0"></div>
+                <div className="absolute inset-0 bg-[url('/assets/aura3.png')] z-0"></div>
                 {/* Main Div/Container */}
-                <div className="mx-4  relative  rounded-lg">
+                <div className="mx-4 relative rounded-lg">
                   {/* Header/Nav */}
                   <Header />
-                  <div className="flex h-[48rem] p-4 ">
+                  <div className="flex h-[48rem] p-4">
                     {/* Left Side */}
-                    <LeftPage modelPath={carModels[currentModelIndex]} />
+                    <LeftPage
+                      modelPath={carModels[currentModelIndex].modelUrl}
+                    />
                     {/* Right Side */}
                     <RightPage
                       currentModelIndex={currentModelIndex}
                       setCurrentModelIndex={setCurrentModelIndex}
                       totalModels={carModels.length}
+                      carDescription={carModels[currentModelIndex].description}
                     />
                   </div>
                 </div>

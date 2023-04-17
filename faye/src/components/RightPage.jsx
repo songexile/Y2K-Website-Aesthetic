@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 
-function RightPage({ currentModelIndex, setCurrentModelIndex, totalModels }) {
+function RightPage({
+  currentModelIndex,
+  setCurrentModelIndex,
+  totalModels,
+  carDescription,
+}) {
   return (
     <div className="w-1/2 flex flex-col ">
       <div className="h-1/6 bg-gradient-to-t from-[#cee3e5] to-[#b4cdcf] mx-2 mt-2 rounded-md y2k-shadow4 inner-stroke flex justify-evenly flex-col sm:flex-row items-center">
@@ -44,10 +49,8 @@ function RightPage({ currentModelIndex, setCurrentModelIndex, totalModels }) {
             <div class="title-bar-text">About</div>
             <div class="title-bar-controls"></div>
           </div>
-          <div className="flex mx-4 mt-2 ">
-            Final Fantasy X[a] is a role-playing video game developed and
-            published by Square as the tenth main entry in the Final Fantasy
-            series. Originally released in 2001 for PlayStation 2.
+          <div className="flex mx-4 mt-2 justify-center items-center  text-center">
+            {carDescription}
           </div>
         </div>
       </div>
