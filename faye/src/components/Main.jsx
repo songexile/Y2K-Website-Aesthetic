@@ -9,6 +9,11 @@ function Main() {
   const carModels = [
     "src/assets/models/mercedes-benz_s_500_-_ps1_low_poly/scene.gltf",
     "src/assets/models/toyota_corolla_-_ps1_low_poly/scene.gltf",
+    "src/assets/models/honda_accord_-_ps1_low_poly/scene.gltf",
+    // "src/assets/models/kawasaki_spectre_-_ps1_low_poly/scene.gltf",
+    // "src/assets/models/suzuki_grand_vitara_-_ps1_low_poly/scene.gltf",
+    // "src/assets/models/volkswagen_golf_v_-_ps1_low_poly/scene.gltf",
+    "src/assets/models/volvo_v70_-_ps1_low_poly/scene.gltf",
   ];
 
   const [currentModelIndex, setCurrentModelIndex] = useState(0);

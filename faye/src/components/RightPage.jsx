@@ -5,7 +5,13 @@ function RightPage({ currentModelIndex, setCurrentModelIndex, totalModels }) {
     <div className="w-1/2 flex flex-col ">
       <div className="h-1/6 bg-gradient-to-t from-[#cee3e5] to-[#b4cdcf] mx-2 mt-2 rounded-md y2k-shadow4 inner-stroke flex justify-evenly flex-col sm:flex-row items-center">
         {/* Left Arrow */}
-        <div className="xp-button-container text-gray-400">
+        <div
+          className={
+            currentModelIndex === 0
+              ? "text-gray-400 xp-button-container"
+              : "text-black xp-button-container"
+          }
+        >
           <button
             className=""
             disabled={currentModelIndex === 0}
@@ -15,7 +21,13 @@ function RightPage({ currentModelIndex, setCurrentModelIndex, totalModels }) {
           </button>
         </div>
         {currentModelIndex + 1}/{totalModels}
-        <div className="xp-button-container ">
+        <div
+          className={`xp-button-container ${
+            currentModelIndex === totalModels - 1
+              ? "text-gray-400"
+              : "text-black"
+          }`}
+        >
           <button
             className=""
             disabled={currentModelIndex === totalModels - 1}

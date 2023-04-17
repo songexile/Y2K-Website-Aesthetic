@@ -1,6 +1,5 @@
 import React from "react";
 import ModelLoader from "./ModelLoader";
-import { changeCar } from "../scripts/changeCar";
 
 function LeftPage({ modelPath }) {
   return (
