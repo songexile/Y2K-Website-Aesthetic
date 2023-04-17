@@ -6,6 +6,12 @@ import LeftPage from "./LeftPage";
 import RightPage from "./RightPage";
 
 function Main() {
+  const carModels = [
+    "src/assets/models/mercedes-benz_s_500_-_ps1_low_poly/scene.gltf",
+    "src/assets/models/toyota_corolla_-_ps1_low_poly/scene.gltf",
+  ];
+
+  const [currentModelIndex, setCurrentModelIndex] = useState(0);
   return (
     <div>
       {" "}
@@ -32,9 +38,13 @@ function Main() {
                   <Header />
                   <div className="flex h-[48rem] p-4 ">
                     {/* Left Side */}
-                    <LeftPage />
+                    <LeftPage modelPath={carModels[currentModelIndex]} />
                     {/* Right Side */}
-                    <RightPage />
+                    <RightPage
+                      currentModelIndex={currentModelIndex}
+                      setCurrentModelIndex={setCurrentModelIndex}
+                      totalModels={carModels.length}
+                    />
                   </div>
                 </div>
               </div>
