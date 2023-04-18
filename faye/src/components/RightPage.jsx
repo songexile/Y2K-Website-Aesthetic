@@ -43,7 +43,7 @@ function RightPage({
         </div>
       </div>
 
-      <div className="h-2/6 bg-gradient-to-t from-[#000000] to-[#000000] text-white mx-2 mt-2 rounded-md y2k-shadow4 inner-stroke">
+      <div className="h-5/6 sm:h-2/5 md:h-2/6 bg-gradient-to-t from-[#000000] to-[#000000] text-white mx-2 mt-2 rounded-md y2k-shadow4 inner-stroke">
         <div class="window-body">
           <div class="title-bar">
             <div class="title-bar-text">About</div>
@@ -54,7 +54,7 @@ function RightPage({
           </div>
         </div>
       </div>
-      <div className="h-3/6 flex mx-2 mt-2 ">
+      <div className="hidden sm:flex h-3/6 mx-2 mt-2 ">
         <div className="h-full w-full flex flex-col">
           <div className="h-full bg-gradient-to-t from-[#cee3e5] to-[#b4cdcf] mb- rounded-md y2k-shadow4 inner-stroke"></div>
           <div className="h-4/6 bg-gradient-to-t from-[#8ea7aa] to-[#53686b] y2k-shadow3 rounded-md mt-2 mb-1 inner-stroke"></div>

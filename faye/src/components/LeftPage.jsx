@@ -1,10 +1,10 @@
 import React from "react";
 import ModelLoader from "./ModelLoader";
 
-function LeftPage({ modelPath }) {
+function LeftPage({ modelPath, topSpeed }) {
   return (
-    <div className="w-2/3 flex flex-col">
-      <div className="h-5/6 bg-blue-300 mx-1 mt-2 rounded-xl y2k-shadow2 flex justify-center items-center ">
+    <div className="w-1/3 sm:w-2/3 flex flex-col">
+      <div className="h-1/3 sm:h-5/6 bg-blue-300 mx-1 mt-2 rounded-xl y2k-shadow2 flex justify-center items-center ">
         {/* <div className="h-full rounded-2xl  w-full bg-cover y2k-shadow4 bg-[url('./assets/faye.png')] inner-stroke "></div> */}
         <ModelLoader key={modelPath} modelPath={modelPath} />
       </div>
@@ -12,22 +12,20 @@ function LeftPage({ modelPath }) {
         <div className="flex items-center justify-center h-full">
           <div className="w-1/2 flex flex-col items-start justify-center pr-2">
             <div className="w-full bg-gray-400 m-1 y2k-shadow3 flex">
-              <div className="text-right p-1 text-white bg-green-500 w-1/3 y2k-shadow3"></div>
+              <div className="text-right p-1 text-white bg-green-500 w-[${topSpeed}%] y2k-shadow3">
+                Top Speed
+              </div>
+            </div>
+
+            <div className="w-full bg-gray-400 m-1 y2k-shadow3 flex">
+              <div className="text-right p-1 text-white bg-green-500 w-1/2 y2k-shadow3">
+                Acceleration
+              </div>
             </div>
             <div className="w-full bg-gray-400 m-1 y2k-shadow3 flex">
-              <div className="text-right p-1 text-white bg-green-500 w-1/2 y2k-shadow3"></div>
-            </div>
-            <div className="w-full bg-gray-400 m-1 y2k-shadow3 flex">
-              <div className="text-right p-1 text-white bg-green-500 w-1/2 y2k-shadow3"></div>
-            </div>
-            <div className="w-full bg-gray-400 m-1 y2k-shadow3 flex">
-              <div className="text-right p-1 text-white bg-green-500 w-1/3 y2k-shadow3"></div>
-            </div>
-            <div className="w-full bg-gray-400 m-1 y2k-shadow3 flex">
-              <div className="text-right p-1 text-white bg-green-500 w-1/2 y2k-shadow3"></div>
-            </div>
-            <div className="w-full bg-gray-400 m-1 y2k-shadow3 flex">
-              <div className="text-right p-1 text-white bg-green-500 w-1/2 y2k-shadow3"></div>
+              <div className="text-right p-1 text-white bg-green-500 w-1/2 y2k-shadow3">
+                Handling
+              </div>
             </div>
           </div>
           <div className="w-1/2 flex flex-col items-start justify-center pl-2">
@@ -51,6 +49,12 @@ function LeftPage({ modelPath }) {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex button sm:hidden bg-white ">
+        <button disabled>
+          This website is designed for a Computer, please use a Computer to see
+          all the features
+        </button>
       </div>
     </div>
   );

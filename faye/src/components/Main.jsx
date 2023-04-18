@@ -12,6 +12,9 @@ function Main() {
       name: carModel.name,
       description: carModel.description,
       modelUrl: carModel.modelUrl,
+      topSpeed: carModel.topSpeed,
+      acceleration: carModel.Acceleration,
+      handling: carModel.Handling,
     };
   });
 
@@ -19,8 +22,8 @@ function Main() {
 
   return (
     <div>
-      <div className="flex justify-center items-center min-h-screen bg-black">
-        <div className="window md:w-2/3">
+      <div className="flex justify-center items-center min-h-screen bg-blue-950 ">
+        <div className="window lg:w-5/6 xl:w-4/5 2xl:w-2/3  ">
           <div className="title-bar">
             <div className="title-bar-text">세계 액세스</div>
             <div className="title-bar-controls">
@@ -31,7 +34,7 @@ function Main() {
           </div>
           <div className="window-body">
             <div className="App font-pixelated-sans flex items-center">
-              <div className="mx-auto flex relative">
+              <div className="mx-auto flex relative bg-[url('src/assets/aura3.png')]">
                 {/* Pseudo-element for background image */}
                 <div className="absolute inset-0 bg-opacity-20 z-0 shadow-xl"></div>
                 {/* Pseudo-element for background color */}
@@ -44,6 +47,7 @@ function Main() {
                     {/* Left Side */}
                     <LeftPage
                       modelPath={carModels[currentModelIndex].modelUrl}
+                      carStats={carModels[currentModelIndex].topSpeed}
                     />
                     {/* Right Side */}
                     <RightPage

@@ -2,8 +2,23 @@
   {
     "name": "Mercedes-Benz S 500",
     "description": "Experience the epitome of luxury and sophistication with the Mercedes-Benz S 500. This elegant sedan boasts cutting-edge technology, unparalleled comfort, and a dynamic driving experience. The sleek exterior design commands attention on the road, while the opulent interior pampers you with its premium materials and state-of-the-art features. Make a statement of refined taste and distinction with the Mercedes-Benz S 500.",
-    "modelUrl": "src/assets/models/mercedes-benz_s_500_-_ps1_low_poly/scene.gltf"
+    "modelUrl": "src/assets/models/mercedes-benz_s_500_-_ps1_low_poly/scene.gltf",
+    "stats": {
+      "Top Speed": 85,
+      "Acceleration": 80,
+      "Handling": 75,
+      "Braking": 70,
+      "Fuel Efficiency": 65,
+      "Durability": 90,
+      "Traction": 75,
+      "Weight": 60,
+      "Cargo Capacity": 55,
+      "Drivetrain": 95,
+      "Horsepower": 85,
+      "Customization": 80
+    }
   },
+
   {
     "name": "Toyota Corolla",
     "description": "The 2000 Toyota Corolla offers dependability and fuel efficiency in a compact package. As a trusted daily driver, it provides a smooth and comfortable ride for both city and highway journeys. The straightforward, user-friendly design ensures ease of use and low maintenance costs. With its proven track record for reliability, the 2000 Toyota Corolla is a practical choice for drivers seeking a no-nonsense, economical vehicle.",
