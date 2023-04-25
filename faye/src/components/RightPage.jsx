@@ -60,7 +60,9 @@ function RightPage({
           <div className="h-4/6 bg-gradient-to-t from-[#8ea7aa] to-[#53686b] y2k-shadow3 rounded-md mt-2 mb-1 inner-stroke"></div>
         </div>
         <div className="w-1/2 h-full bg-gradient-to-t from-[#4e6365] to-[#b5d0d2] ml-2 rounded-md flex flex-col items-center inner-stroke">
-          <div className="h-6 mt-2 w-5/6 bg-[#8ba9b0] rounded-md y2k-shadow4 border-y2k"></div>
+          <div className="h-6 mt-2 w-5/6 bg-[#8ba9b0] rounded-md y2k-shadow4 border-y2k flex items-center justify-center">
+            <div className="">Car Auction</div>
+          </div>
           <div className="h-4 mt-2 w-1/2 bg-[#8ba9b0] rounded-md y2k-shadow4 border-y2k"></div>
           <div className="h-1/3 w-2/3 mt-4 bg-[#818989] y2k-shadow2 rounded-md "></div>
           <div className="h-1/6 w-2/3 mt-4 bg-[#818989] y2k-shadow2 rounded-md "></div>
