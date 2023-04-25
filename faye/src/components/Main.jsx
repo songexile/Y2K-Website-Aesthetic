@@ -13,8 +13,8 @@ function Main() {
       description: carModel.description,
       modelUrl: carModel.modelUrl,
       topSpeed: carModel.stats.topSpeed,
-      acceleration: carModel.Acceleration,
-      handling: carModel.Handling,
+      acceleration: carModel.stats.acceleration,
+      handling: carModel.stats.handling,
     };
   });
 
@@ -25,7 +25,7 @@ function Main() {
       <div className="flex justify-center items-center min-h-screen bg-blue-950 ">
         <div className="window lg:w-5/6 xl:w-4/5 2xl:w-2/3  ">
           <div className="title-bar">
-            <div className="title-bar-text">세계 액세스</div>
+            <div className="title-bar-text">Car Shop</div>
             <div className="title-bar-controls">
               <button aria-label="Minimize"></button>
               <button aria-label="Maximize"></button>
@@ -47,7 +47,7 @@ function Main() {
                     {/* Left Side */}
                     <LeftPage
                       modelPath={carModels[currentModelIndex].modelUrl}
-                      carStats={carModels[currentModelIndex].topSpeed}
+                      carStats={carModels[currentModelIndex]}
                     />
                     {/* Right Side */}
                     <RightPage

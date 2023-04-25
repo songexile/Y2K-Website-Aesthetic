@@ -4,7 +4,7 @@ import ModelLoader from "./ModelLoader";
 function LeftPage({ modelPath, carStats }) {
   return (
     <div className="w-1/3 sm:w-2/3 flex flex-col">
-      <div className="h-1/3 sm:h-5/6 bg-blue-300 mx-1 mt-2 rounded-xl y2k-shadow2 flex justify-center items-center ">
+      <div className="h-1/3 sm:h-5/6 bg-blue-300 mx-1 mt-2  y2k-shadow2 flex justify-center items-center ">
         {/* <div className="h-full rounded-2xl  w-full bg-cover y2k-shadow4 bg-[url('./assets/faye.png')] inner-stroke "></div> */}
         <ModelLoader key={modelPath} modelPath={modelPath} />
       </div>
@@ -13,20 +13,26 @@ function LeftPage({ modelPath, carStats }) {
           <div className="w-1/2 flex flex-col items-start justify-center pr-2">
             <div className="w-full bg-gray-400 m-1 y2k-shadow3 flex">
               <div
-                className="text-right p-1 text-white bg-green-500 y2k-shadow3"
-                style={{ width: `${carStats}%` }}
+                className="text-right p-1 text-white bg-green-500 y2k-shadow3 button-animation"
+                style={{ width: `${carStats.topSpeed}%` }}
               >
                 Speed
               </div>
             </div>
 
             <div className="w-full bg-gray-400 m-1 y2k-shadow3 flex">
-              <div className="text-right p-1 text-white bg-green-500 w-1/2 y2k-shadow3">
+              <div
+                className="text-right p-1 text-white bg-green-500 y2k-shadow3 button-animation"
+                style={{ width: `${carStats.acceleration}%` }}
+              >
                 Acceleration
               </div>
             </div>
             <div className="w-full bg-gray-400 m-1 y2k-shadow3 flex">
-              <div className="text-right p-1 text-white bg-green-500 w-1/2 y2k-shadow3">
+              <div
+                className="text-right p-1 text-white bg-green-500 y2k-shadow3 button-animation"
+                style={{ width: `${carStats.handling}%` }}
+              >
                 Handling
               </div>
             </div>

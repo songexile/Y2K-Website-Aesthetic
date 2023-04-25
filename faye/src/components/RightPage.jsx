@@ -49,7 +49,7 @@ function RightPage({
             <div class="title-bar-text">About</div>
             <div class="title-bar-controls"></div>
           </div>
-          <div className="flex mx-4 mt-2 justify-center items-center  text-center">
+          <div className="flex mx-4 mt-2 justify-center items-center  text-center ">
             {carDescription}
           </div>
         </div>
