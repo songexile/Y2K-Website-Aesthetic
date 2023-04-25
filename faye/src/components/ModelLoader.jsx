@@ -68,7 +68,12 @@ function ModelLoader(props) {
         <meshBasicMaterial map={texture} />
       </mesh>
 
-      <OrbitControls enablePan={true} enableRotate={true} enableZoom={true} />
+      <OrbitControls
+        enablePan={false}
+        enableRotate={true}
+        enableZoom={false}
+        maxPolarAngle={Math.PI / 2 - 0.1}
+      />
     </Canvas>
   );
 }
