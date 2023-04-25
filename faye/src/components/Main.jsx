@@ -12,7 +12,7 @@ function Main() {
       name: carModel.name,
       description: carModel.description,
       modelUrl: carModel.modelUrl,
-      topSpeed: carModel.topSpeed,
+      topSpeed: carModel.stats.topSpeed,
       acceleration: carModel.Acceleration,
       handling: carModel.Handling,
     };

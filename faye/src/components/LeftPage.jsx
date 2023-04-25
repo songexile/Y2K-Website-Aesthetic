@@ -1,7 +1,7 @@
 import React from "react";
 import ModelLoader from "./ModelLoader";
 
-function LeftPage({ modelPath, topSpeed }) {
+function LeftPage({ modelPath, carStats }) {
   return (
     <div className="w-1/3 sm:w-2/3 flex flex-col">
       <div className="h-1/3 sm:h-5/6 bg-blue-300 mx-1 mt-2 rounded-xl y2k-shadow2 flex justify-center items-center ">
@@ -12,8 +12,11 @@ function LeftPage({ modelPath, topSpeed }) {
         <div className="flex items-center justify-center h-full">
           <div className="w-1/2 flex flex-col items-start justify-center pr-2">
             <div className="w-full bg-gray-400 m-1 y2k-shadow3 flex">
-              <div className="text-right p-1 text-white bg-green-500 w-[${topSpeed}%] y2k-shadow3">
-                Top Speed
+              <div
+                className="text-right p-1 text-white bg-green-500 y2k-shadow3"
+                style={{ width: `${carStats}%` }}
+              >
+                Speed
               </div>
             </div>
 
