@@ -57,7 +57,15 @@ function RightPage({
       <div className="hidden sm:flex h-3/6 mx-2 mt-2 ">
         <div className="h-full w-full flex flex-col">
           <div className="h-full bg-gradient-to-t from-[#cee3e5] to-[#b4cdcf] mb- rounded-md y2k-shadow4 inner-stroke"></div>
-          <div className="h-4/6 bg-gradient-to-t from-[#8ea7aa] to-[#53686b] y2k-shadow3 rounded-md mt-2 mb-1 inner-stroke"></div>
+          <div className="h-4/6 bg-gradient-to-t from-[#8ea7aa] to-[#53686b] y2k-shadow3 rounded-md mt-2 mb-1 inner-stroke flex items-center justify-center">
+            <a href="https://sketchfab.com/wersaus33">
+              <div className=" bg-white y2k-shadow4 ">
+                <button className="p-4">
+                  Made with the help of models from Wersaus33
+                </button>
+              </div>
+            </a>
+          </div>
         </div>
         <div className="w-1/2 h-full bg-gradient-to-t from-[#4e6365] to-[#b5d0d2] ml-2 rounded-md flex flex-col items-center inner-stroke">
           <div className="h-6 mt-2 w-5/6 bg-[#8ba9b0] rounded-md y2k-shadow4 border-y2k flex items-center justify-center">
