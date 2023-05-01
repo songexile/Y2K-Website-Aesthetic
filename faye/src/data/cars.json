@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Mercedes-Benz S 500",
+    "description": "Experience the epitome of luxury and sophistication with the Mercedes-Benz S 500. This elegant sedan boasts cutting-edge technology, unparalleled comfort, and a dynamic driving experience. The sleek exterior design commands attention on the road, while the opulent interior pampers you with its premium materials and state-of-the-art features. Make a statement of refined taste and distinction with the Mercedes-Benz S 500.",
+    "modelUrl": "src/assets/models/mercedes-benz_s_500_-_ps1_low_poly/scene.gltf",
+    "stats": {
+      "topSpeed": 85,
+      "acceleration": 80,
+      "handling": 75
+    }
+  },
+  {
+    "name": "Toyota Corolla",
+    "description": "The 2000 Toyota Corolla offers dependability and fuel efficiency in a compact package. As a trusted daily driver, it provides a smooth and comfortable ride for both city and highway journeys. The straightforward, user-friendly design ensures ease of use and low maintenance costs. With its proven track record for reliability, the 2000 Toyota Corolla is a practical choice for drivers seeking a no-nonsense, economical vehicle.",
+    "modelUrl": "src/assets/models/toyota_corolla_-_ps1_low_poly/scene.gltf",
+    "stats": {
+      "topSpeed": 60,
+      "acceleration": 45,
+      "handling": 65
+    }
+  },
+  {
+    "name": "Honda Accord",
+    "description": "Step into the spacious and comfortable interior of the 2000 Honda Accord, a midsize sedan that offers both practicality and style. Known for its impressive fuel economy and reliable performance, the Accord is a popular choice among families and commuters alike. With ample cabin space, user-friendly features, and a reputation for longevity, the 2000 Honda Accord delivers a well-rounded driving experience that stands the test of time.",
+    "modelUrl": "src/assets/models/honda_accord_-_ps1_low_poly/scene.gltf",
+    "stats": {
+      "topSpeed": 70,
+      "acceleration": 55,
+      "handling": 70
+    }
+  },
+  {
+    "name": "Volvo V70",
+    "description": "Discover the perfect blend of safety and comfort in the Volvo V70, a well-built wagon designed for family adventures and daily commutes. With its outstanding build quality and innovative safety features, you can drive with confidence and peace of mind. The V70's spacious interior and versatile cargo space make it a practical choice for families on the go, while its smooth ride and refined handling deliver an enjoyable driving experience.",
+    "modelUrl": "src/assets/models/volvo_v70_-_ps1_low_poly/scene.gltf",
+    "stats": {
+      "topSpeed": 75,
+      "acceleration": 65,
+      "handling": 72
+    }
+  }
+]

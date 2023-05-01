@@ -25,7 +25,8 @@ function Header() {
   return (
     <div className="h-8 mt-4 w-full flex justify-center items-center y2k-shadow4 bg-gradient-to-r from-[#cee3e5] to-[#b4cdcf] rounded-lg inner-stroke2 opacity-90 ">
       <div className="flex justify-end  w-full">
-        <h1 className="rounded-md   bg-white y2k-shadow4 mx-4 w-1/6   ">
+        <h1 className="rounded-md   bg-white y2k-shadow4 mx-4    ">
+          {/* Displays date */}
           {formattedDateUpperCase}
         </h1>
       </div>
