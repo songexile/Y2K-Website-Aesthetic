@@ -2,8 +2,10 @@
 
 Step back in time and experience the charm of the Windows XP aesthetic with a modern twist!
 
-![Y2K Aesthetic Screenshot 1](https://github.com/songexile/Y2K-Website-Aesthetic/blob/main/images_for_readme/y2k_1.PNG)
-![Y2K Aesthetic Screenshot 2](https://github.com/songexile/Y2K-Website-Aesthetic/blob/main/images_for_readme/y2k_2.PNG)
+<p float="left">
+  <img src="https://github.com/songexile/Y2K-Website-Aesthetic/blob/main/images_for_readme/y2k_1.PNG" width="45%" />
+  <img src="https://github.com/songexile/Y2K-Website-Aesthetic/blob/main/images_for_readme/y2k_2.PNG" width="45%" /> 
+</p>
 
 ## 🎨 Features
 
